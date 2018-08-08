@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>蝶之谷</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/auislide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <style>
+        .empty{ text-align: center; padding: 120px 0; }
+    </style>
+</head>
+<body>
+  <div id="aui-slide">
+    <div id="slidebox" class="aui-slide-wrap">
+      <div class="aui-slide-node bg-dark" tapmode onclick="toBanner('https://fuli.bianxianmao.com?appKey=b8f956276db24e9dbc01f4fe20fe37f7&appType=h5&appEntrance=1')">
+          <img src="../image/flsad1.jpg" />
+      </div>
+
+      <div class="aui-slide-node bg-dark" tapmode onclick="toBanner('https://fuli.bianxianmao.com?appKey=b8f956276db24e9dbc01f4fe20fe37f7&appType=h5&appEntrance=1')">
+          <img src="../image/flsad2.jpg" />
+      </div>
+    </div>
+    <div class="aui-slide-page-wrap"></div>
+  </div>
+  <section class="aui-grid aui-margin-b-15">
+      <div class="aui-row">
+
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('https://fuli.bianxianmao.com?appKey=b8f956276db24e9dbc01f4fe20fe37f7&appType=h5&appEntrance=1')">
+          <i class="aui-iconfont"><img src="../image/fulishe.jpg"/></i>
+          <div class="aui-grid-label">福利社</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('https://izhaoquan.com')">
+          <i class="aui-iconfont"><img src="../image/youhui.jpg"/></i>
+          <div class="aui-grid-label">领券中心</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('http://bookopen.bianxianmao.com/redirect.htm?appKey=b8f956276db24e9dbc01f4fe20fe37f7&appType=h5&appEntrance=1')">
+          <i class="aui-iconfont"><img src="../image/shu.jpg"/></i>
+          <div class="aui-grid-label">小说阅读</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('https://wwj.bianxianmao.com/#/home?appKey=b8f956276db24e9dbc01f4fe20fe37f7&appType=h5&appEntrance=1')">
+          <i class="aui-iconfont"><img src="../image/wawa.png"/></i>
+          <div class="aui-grid-label">娃娃机</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('http://live.bianxianmao.com/redirect.htm?appKey=b8f956276db24e9dbc01f4fe20fe37f7&appType=h5&appEntrance=1')">
+          <i class="aui-iconfont"><img src="../image/mnzb.jpg"/></i>
+          <div class="aui-grid-label">美女直播</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('https://joke.bianxianmao.com?appKey=b8f956276db24e9dbc01f4fe20fe37f7')">
+          <i class="aui-iconfont"><img src="../image/duanzi.jpg"/></i>
+          <div class="aui-grid-label">搞笑段子</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('https://xw.qq.com/')">
+          <i class="aui-iconfont"><img src="../image/xinwen.jpg"/></i>
+          <div class="aui-grid-label">新闻</div>
+        </div>
+        <div class="aui-col-xs-3" tapmode onclick="toBanner('http://h.lequ.com/webgame/in/id/11/gid/10001/lq_sid/35772941')">
+          <i class="aui-iconfont"><img src="../image/youxi.jpg"/></i>
+          <div class="aui-grid-label">游戏</div>
+        </div>
+
+      </div>
+
+  </section>
+
+  <div class="fx-box">
+    <div class="fx-box-t">
+      <img src="" id="fximg1" style="border-radius:0.5rem;box-shadow:0.2rem 0.2rem 0.4rem rgba(99, 99, 99, 0.61);" tapmode onclick="imgUrl('img1')">
+    </div>
+    <div class="br"></div>
+    <div class="fx-box-t">
+      <img src="" id="fximg2" style="border-radius:0.5rem;box-shadow:0.2rem 0.2rem 0.4rem rgba(99, 99, 99, 0.61);" tapmode onclick="imgUrl('img2')">
+    </div>
+
+  </div>
+  <div class="">
+
+  </div>
+</body>
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/auipullrefresh.js"></script>
+<script type="text/javascript" src="../script/auislide.js"></script>
+<script type="text/javascript" src="../script/auilazyload.js" ></script>
+<script type="text/javascript">
+
+//alert(localStorage.getItem('fxpic1'));
+  var slide = new auiSlide({
+      container:document.getElementById("aui-slide"),
+      // "width":300,
+      "height":120,
+      "speed":300,
+      "pageShow":true,
+      "autoPlay": 5000,
+      "pageStyle":'dot',
+      "loop":true,
+      'dotPosition':'center',
+  });
+  new auiLazyload({
+      errorImage:'../image/error-img.jpg'
+  });
+
+  apiready = function(){
+    api.parseTapmode();
+    document.getElementById("fximg1").src = localStorage.getItem('fxpic1');
+    document.getElementById("fximg2").src = localStorage.getItem('fxpic2');
+
+  }
+
+  function imgUrl(img){
+    if (img=='img1') {
+      api.openWin({
+          name: 'h5',
+          url: './h5.html',
+          pageParam: {
+              url: localStorage.getItem('fxurl1')
+          }
+      });
+    }else {
+      api.openWin({
+          name: 'h5',
+          url: './h5.html',
+          pageParam: {
+              url: localStorage.getItem('fxurl2')
+          }
+      });
+    }
+
+  }
+
+
+  //访问轮播地址
+  function toBanner(url){
+
+    if (url == '') {
+
+    }else {
+      api.openWin({
+          name: 'h5',
+          url: './h5.html',
+          pageParam: {
+              url: url
+          }
+      });
+    }
+  }
+
+
+  function openWin(name){
+    var time = localStorage.getItem('user_time');
+    var user_id = localStorage.getItem('user_id');
+    var username = localStorage.getItem('user_name');
+    var timestamp = Date.parse(new Date())/1000;
+    if (user_id<1) {
+      api.alert({
+          title: '请先登录',
+          msg: '知道了',
+      });
+      return;
+    }
+
+    if (time > timestamp) {
+      api.openWin({
+          name: ''+name+'',
+          url: ''+name+'.html',
+          bounces:false,
+          delay: 300
+      });
+    }else if (time == -1) {
+      api.openWin({
+          name: ''+name+'',
+          url: ''+name+'.html',
+          bounces:false,
+          delay: 300
+      });
+    }else if (time < timestamp) {
+      alert('到期啦~官人先开个VIP哟');
+      api.openWin({
+          name: 'open_vip_win',
+          url: './open_vip_win.html',
+      });
+    }
+
+  }
+
+
+
+  //幻灯轮播图
+  function banNer(){
+    var slide = new auiSlide({
+        container:document.getElementById("aui-slide"),
+        // "width":300,
+        "height":150,
+        "speed":300,
+        "pageShow":true,
+        "autoPlay": 5000,
+        "pageStyle":'dot',
+        "loop":true,
+        'dotPosition':'center',
+    });
+  }
+
+</script>
+
+</html>

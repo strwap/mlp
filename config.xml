@@ -1,0 +1,63 @@
+ <widget id="A6088191158786"  version="0.0.1">
+
+    <name>零六影视</name>
+
+    <description>
+
+        Example For APICloud.
+
+    </description>
+
+    <author email="developer@apicloud.com" href="http://www.apicloud.com">
+
+        Developer
+
+    </author>
+
+    <content src="index.html" ></content>
+
+    <access origin="*" ></access>
+
+    <preference name="pageBounce" value="false"></preference>
+
+    <preference name="appCertificateVerify" value="false" ></preference>
+
+	<preference name="appBackground" value="rgba(0,0,0,0.0)"></preference>
+
+	<preference name="windowBackground" value="rgba(0,0,0,0.0)"></preference>
+
+	<preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"></preference>
+
+	<preference name="hScrollBarEnabled" value="false"></preference>
+
+	<preference name="vScrollBarEnabled" value="false"></preference>
+
+	<preference name="autoLaunch" value="true"></preference>
+
+	<preference name="fullScreen" value="false"></preference>
+
+	<preference name="autoUpdate" value="true" ></preference>
+
+	<preference name="smartUpdate" value="true" ></preference>
+
+	<preference name="debug" value="true"></preference>
+
+	<preference name="statusBarAppearance" value="true"></preference>
+
+	<permission name="readPhoneState" ></permission>
+
+	<permission name="camera" ></permission>
+
+	<permission name="record" ></permission>
+
+	<permission name="location" ></permission>
+
+	<permission name="fileSystem" ></permission>
+
+	<permission name="internet" ></permission>
+
+	<permission name="bootCompleted" ></permission>
+
+	<permission name="hardware" ></permission>
+
+</widget>
